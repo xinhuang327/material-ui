@@ -14,7 +14,10 @@ class App extends React.Component {
         <Text style={styles.title}>
           Material-UI
         </Text>
-        <Subheader>
+        <Subheader inset={true}>
+          Subheader
+        </Subheader>
+        <Subheader inset={false}>
           Subheader
         </Subheader>
       </View>

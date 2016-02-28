@@ -1,7 +1,19 @@
-import {
+import React, {
   AppRegistry,
 } from 'react-native';
+import {
+  Presets,
+  LookRoot,
+} from 'react-look-native';
 
 import App from './app.native';
 
-AppRegistry.registerComponent('MaterialUIDocs', () => App);
+const config = Presets['react-native'];
+
+const Container = () => (
+  <LookRoot config={config}>
+    <App />
+  </LookRoot>
+);
+
+AppRegistry.registerComponent('MaterialUIDocs', () => Container);

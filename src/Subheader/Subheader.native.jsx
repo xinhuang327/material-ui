@@ -1,9 +1,9 @@
 import React from 'react-native';
+import look, {StyleSheet} from 'react-look-native';
 
 const {
   Text,
   View,
-  StyleSheet,
 } = React;
 
 class Subheader extends React.Component {
@@ -54,13 +54,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff', // To show the box sizing
   },
   text: {
-    fontWeight: '500',
-    paddingLeft: 16,
+    fontWeight: () => {
+      return '500';
+    },
+    paddingLeft: (props) => props.inset ? 72 : 16,
     textAlignVertical: 'center',
     fontSize: 14,
-    color: 'rgba(0, 0, 0, 0.54)',
+    color: () => {
+      return 'rgba(0, 0, 0, 0.54)';
+    },
   },
 });
 
 
-export default Subheader;
+export default look(Subheader);
