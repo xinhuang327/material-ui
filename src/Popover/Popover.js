@@ -166,7 +166,7 @@ const Popover = React.createClass({
               open: false,
               muiTheme: newMuiTheme,
             });
-          }, 500);
+          }, 200);
         } else {
           this.setState({
             open: false,
